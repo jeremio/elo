@@ -30,12 +30,16 @@
   "homepage": "https://elo-lang.org",
   "license": "MIT",
   "dependencies": {
-    "@codemirror/autocomplete": "^6.0.0",
-    "@codemirror/language": "^6.0.0",
     "@lezer/highlight": "^1.0.0",
     "@lezer/lr": "^1.0.0"
   },
+  "peerDependencies": {
+    "@codemirror/autocomplete": "^6.0.0",
+    "@codemirror/language": "^6.0.0"
+  },
   "devDependencies": {
+    "@codemirror/autocomplete": "^6.0.0",
+    "@codemirror/language": "^6.0.0",
     "@lezer/generator": "^1.0.0",
     "@rollup/plugin-typescript": "^12.1.4",
     "mocha": "^11.0.0",

@@ -15,7 +15,19 @@ export default defineConfig({
     resolve: {
       alias: {
         '@enspirit/elo': resolve('../src/index.ts')
-      }
+      },
+      // Force all @codemirror packages to resolve from web/node_modules
+      // This prevents duplicate instances when using file: linked packages
+      dedupe: [
+        '@codemirror/state',
+        '@codemirror/view',
+        '@codemirror/language',
+        '@codemirror/autocomplete',
+        '@codemirror/commands',
+        '@lezer/common',
+        '@lezer/highlight',
+        '@lezer/lr'
+      ]
     },
     optimizeDeps: {
       include: [
